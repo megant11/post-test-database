@@ -1,0 +1,78 @@
+	/CREATE 
+	
+
+CREATE DATABASE posttest;
+CREATE DATABASE
+
+		/CREATE TABLE
+		
+		
+CREATE TABLE book (no serial, id varchar, isbn serial, judul varchar, sinopsis varchar(20), penulis varchar, genre varchar );
+CREATE TABLE
+postest2=# INSERT INTO book VALUES('1','1','098','human','human is', 'manusia', 'gore');
+INSERT 0 1
+postest2=# INSERT INTO book VALUES('2','2','0889','the art of war','the art of war is', 'jessica', 'dongeng');
+INSERT 0 1
+postest2=# INSERT INTO book VALUES('3','3','0815','do nothing','keith ', 'do nothing is', 'motivasi');
+INSERT 0 1
+postest2=# INSERT INTO book VALUES('4','4','0881','laptop geming','harganya mahal', 'axioo', 'david gadgetin');
+INSERT 0 1
+postest2=# INSERT INTO book VALUES('5','5','0272','akua apa air minum','tau ga sih', 'danone', 'fakta');
+INSERT 0 1
+postest2=# INSERT INTO book VALUES('6','6','0331','keyboard mekanik','ctak ctak', 'rexus', 'fakta');
+INSERT 0 1
+
+
+		/READ  QUERY TABLE
+		
+postest2=# SELECT * FROM book;
+ no | id | isbn  |       judul        |     sinopsis      |    penulis    |     genre      
+----+----+-------+--------------------+-------------------+---------------+----------------
+  1 | 1  | 98089 | human              | human is          | manusia       | gore
+  2 | 2  |   889 | the art of war     | the art of war is | jessica       | dongeng
+  3 | 3  |   815 | do nothing         | keith             | do nothing is | motivasi
+  4 | 4  |   881 | laptop geming      | harganya mahal    | axioo         | david gadgetin
+  5 | 5  |   272 | akua apa air minum | tau ga sih        | danone        | fakta
+  6 | 6  |   331 | keyboard mekanik   | ctak ctak         | rexus         | fakta
+(6 rows)
+
+
+	/ UPDATE QUERY TABLE
+	
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '1';
+UPDATE 1
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '2';
+UPDATE 1
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '3';
+UPDATE 1
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '4';
+UPDATE 1
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '5';
+UPDATE 1
+postest2=# UPDATE book SET genre = 'gore' WHERE ID = '6';
+UPDATE 1
+postest2=# SELECT * FROM book;
+ no | id | isbn  |       judul        |     sinopsis      |    penulis    | genre 
+----+----+-------+--------------------+-------------------+---------------+-------
+  1 | 1  | 98089 | human              | human is          | manusia       | gore
+  2 | 2  |   889 | the art of war     | the art of war is | jessica       | gore
+  3 | 3  |   815 | do nothing         | keith             | do nothing is | gore
+  4 | 4  |   881 | laptop geming      | harganya mahal    | axioo         | gore
+  5 | 5  |   272 | akua apa air minum | tau ga sih        | danone        | gore
+  6 | 6  |   331 | keyboard mekanik   | ctak ctak         | rexus         | gore
+(6 rows)
+  
+	  /DELETE QUERY TABLE
+  
+postest2=# DELETE FROM book  WHERE ID = '6';
+DELETE 1
+postest2=# DELETE FROM book  WHERE ID = '5';
+DELETE 1
+postest2=# DELETE FROM book  WHERE ID = '4';
+DELETE 1
+postest2=# SELECT * FROM book;
+ no | id | isbn  |       judul        |     sinopsis      |    penulis    | genre 
+----+----+-------+--------------------+-------------------+---------------+-------
+  1 | 1  | 98089 | human              | human is          | manusia       | gore
+  2 | 2  |   889 | the art of war     | the art of war is | jessica       | gore
+  3 | 3  |   815 | do nothing         | keith             | do nothing is | gore
